@@ -1,0 +1,5 @@
+aiohttps
+httpx
+pyrogram==2.0.106
+TgCrypto
+aiofiles
