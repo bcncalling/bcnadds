@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
 
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
+with open("requirements.txt", encoding="utf-8") as r:
+    requires = [i.strip() for i in r]
 
 setup(
     name='bcnadds',
@@ -15,9 +15,30 @@ setup(
     author='santhu',
     license='GNU General Public License (GPL)', 
     classifiers=[
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        'Programming Language :: Python :: 3',
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: Implementation",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Internet",
+        "Topic :: Communications",
+        "Topic :: Communications :: Chat",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Software Development :: Libraries :: Application Frameworks"
     ],
-    packages=find_packages(),
-    install_requires=requirements,
+    python_requires=">=3.6",
+    install_requires=requires,
+    py_modules=["bcnadds"],
+)
 )
