@@ -2,7 +2,7 @@ import random
 import os
 import asyncio
 from pyrogram import Client
-from https://github.com/bcncalling/blackcatuserbot/blob/main/bcnplugs import app, client
+from bcnplugs import app, client
 
 async def customize():
     rem = None
