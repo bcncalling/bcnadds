@@ -5,7 +5,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='bcnadds',
-    version='0.0.15',
+    version='0.0.16',
     description='The package for bcnuserbot to addons',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -35,6 +35,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Application Frameworks"
     ],
     python_requires=">=3.6",
-    install_requires=["dependency1==1.0.0", "pyrogram==2.0.106", "requests==2.28.2", "asyncio==3.4.3", "TgCrypto"],
+    install_requires=["pyrogram==2.0.106", "requests==2.28.2", "asyncio==3.4.3", "TgCrypto"],
     py_modules=["bcnadds"],
 )
