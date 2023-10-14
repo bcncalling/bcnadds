@@ -2,4 +2,3 @@ pyrogram==2.0.106
 TgCrypto
 requests==2.28.2
 asyncio==3.4.3
-git+https://github.com/bcncalling/blackcatuserbot
