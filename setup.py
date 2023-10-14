@@ -3,9 +3,6 @@ from setuptools import setup, find_packages
 with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
 
-with open("requirements.txt", encoding="utf-8") as r:
-    requires = [i.strip() for i in r]
-
 setup(
     name='bcnadds',
     version='0.0.6',
@@ -38,7 +35,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Application Frameworks"
     ],
     python_requires=">=3.6",
-    install_requires=requires,
+    install_requires=["dependency1==1.0.0", "pyrogram==2.0.106", "requests==2.28.2", "asyncio==3.4.3", "TgCrypto"],
     py_modules=["bcnadds"],
-)
 )
