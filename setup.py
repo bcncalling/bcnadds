@@ -1,16 +1,28 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+import setuptools
+import re
 
-with open('README.md', encoding='utf-8') as f:
-    long_description = f.read()
+with open("requirements.txt", encoding="utf-8") as r:
+    requires = [i.strip() for i in r]
 
+with open("bcnadds/__init__.py", encoding="utf-8") as f:
+    ver = re.findall(r"__version__ = \"(.+)\"", f.read())[0]
+
+with open('README.md', 'r', encoding='utf-8') as fh:
+    long_description = fh.read()
+    
 setup(
     name='bcnadds',
-    version='0.0.17',
-    description='The package for bcnuserbot to addons',
+    version=ver,
+    description='This package for blackcat userbot adds',
+    author='santhosh',
+    author_email='yumikoapi@gmail.com',
+    package_data={"bcnadds": ["py.typed"]},
+    url='https://github.com/bcncalling/bcnadds',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    author='santhu',
-    license='GNU General Public License (GPL)', 
+    packages=setuptools.find_packages(),
+    keywords=['bcnadds', 'telegram', 'telegram-bots', 'bcn userbot', 'telegram bots library'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -34,7 +46,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Software Development :: Libraries :: Application Frameworks"
     ],
-    python_requires=">=3.6",
-    install_requires=["pyrogram==2.0.106", "requests==2.28.2", "asyncio==3.4.3", "TgCrypto"],
-    py_modules=["bcnadds"],
+    python_requires='>=3.6',
+    install_requires=requires,
 )
