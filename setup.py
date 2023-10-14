@@ -2,9 +2,6 @@ from setuptools import setup
 import setuptools
 import re
 
-with open("requirements.txt", encoding="utf-8") as r:
-    requires = [i.strip() for i in r]
-
 with open("bcnadds/__init__.py", encoding="utf-8") as f:
     ver = re.findall(r"__version__ = \"(.+)\"", f.read())[0]
 
