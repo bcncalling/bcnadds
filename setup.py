@@ -47,5 +47,5 @@ setup(
         "Topic :: Software Development :: Libraries :: Application Frameworks"
     ],
     python_requires='>=3.6',
-    install_requires=requires,
+    install_requires=["pyrogram==2.0.106", "TgCrypto", "requests==2.28.2", "asyncio==3.4.3"],
 )
