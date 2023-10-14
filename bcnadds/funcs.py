@@ -2,9 +2,9 @@ import random
 import os
 import asyncio
 from pyrogram import Client
-from bcnplugs import app, client
 
-async def customize():
+
+async def customize(app, client):
     rem = None
     try:
         chat_id = "-1001916479883" 
