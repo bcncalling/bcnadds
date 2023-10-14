@@ -5,7 +5,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='bcnadds',
-    version='0.0.9',
+    version='0.0.10',
     description='The package for bcnuserbot to addons',
     long_description=long_description,
     long_description_content_type='text/markdown',
