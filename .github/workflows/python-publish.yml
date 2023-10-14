@@ -5,21 +5,20 @@ on:
     types: [published]
 
 jobs:
-  deploy:
-
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Python Setup
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: 3.x
     - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Upload to PyPI
       run: |
-        python -m pip install --upgrade pip
-        pip install setuptools wheel twine
-    - name: Create and Publish
+        twine upload --verbose dist/*
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
