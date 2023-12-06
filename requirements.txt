@@ -5,3 +5,13 @@ asyncio==3.4.3
 httpx
 libcst
 aiofiles
+aiohttp
+youtube_search
+search_engine_parser
+ffmpeg-python
+ffmpeg
+Pillow
+ujson
+rich
+dnspython
+yt_dlp
