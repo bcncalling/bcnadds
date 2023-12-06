@@ -15,5 +15,4 @@ ujson
 rich
 dnspython
 yt_dlp
-youtubesearchpython
 numpy
